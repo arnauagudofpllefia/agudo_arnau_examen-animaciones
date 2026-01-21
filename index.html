@@ -1,11 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen Animaciones</title>
 </head>
+<style>
+    body {
+        margin: 100px;
+        background-color: rgb(93, 66, 190);
+
+    }
+    .divGeneral{
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titulo{
+        color: rgb(93, 66, 190);
+        font-size: 50px;
+        border-bottom: 1000px;
+        border-color: rgb(93, 66, 190);
+    }
+
+    .ejercicio{
+        color: rgb(72, 41, 187);
+    }
+    .exercicio1-flex {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .divCard {
+        border-radius: 10%;
+        background-color: rgb(248, 248, 248);
+        width: 300px;
+        height: 450px;
+        box-shadow: gray;
+    }
+
+    .divCard:hover {
+        transform: scale(1.1);
+        transition: 1s ease;
+    }
+
+    .divColor1 {
+        background: rgb(168, 43, 168);
+        border-radius: 10%;
+        width: 300px;
+        height: 300px;
+    }
+
+    .divColor2 {
+        background: rgb(204, 99, 195);
+        border-radius: 10%;
+        width: 300px;
+        height: 300px;
+    }
+
+    .divColor3 {
+        background: turquoise;
+        border-radius: 10%;
+        width: 300px;
+        height: 300px;
+    }
+
+    .textoCard {
+        padding: 5px;
+    }
+
+    .btnFons {
+        padding: 10px;
+        background-color: rgb(84, 142, 218);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin-left: 20px;
+    }
+
+    .btnFons:hover {
+        background-color: rgb(77, 131, 201);
+    }
+
+    .btnRotate {
+        padding: 10px;
+        background-color: rgb(199, 44, 44);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin-left: 20px;
+    }
+
+    .btnRotate:active {
+        transition: 1s;
+        transform: rotate(360deg);
+    }
+
+    .btnScale {
+        padding: 10px;
+        background-color: rgba(25, 209, 95, 0.664);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin-left: 20px;
+    }
+
+    .btnScale:hover {
+        transition: 1s;
+        transform: scale(1.1);
+    }
+
+    .btnComb {
+        padding: 10px;
+        background-color: rgba(184, 111, 199, 0.664);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin-left: 20px;
+    }
+
+    .btnComb:hover {
+        transition: 1s;
+        transform: scale(1.1);
+        transform: rotate(20deg);
+        background-color: rgba(151, 24, 177, 0.664);
+    }
+    .ex3{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 700px;
+    }
+    .redonda {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: rgb(211, 115, 211);
+        animation: escalar 1.5s infinite alternate;
+    }
+
+    @keyframes escalar {
+        100% {
+            transform: scale(1.2);
+        }
+
+    }
+
+    .menu {
+        width: 1000px;
+        height: 50px;
+        background-color: gainsboro;
+        text-align: center;
+        display: flex;
+        gap: 20px;
+        margin-left: 300px;
+        justify-content: center;
+
+    }
+
+    .seccion a {
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+    }
+
+    .seccion a:hover {
+        color: rgb(101, 101, 190);
+    }
+
+    .barra {
+        width: 1px;
+        height: 1px;
+        background-color: rgb(101, 101, 190);
+    }
+
+    .seccion:hover .barra {
+        animation: agrandar 1s;
+
+    }
+
+    @keyframes agrandar {
+        0% {
+            width: 0px;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+</style>
+
 <body>
-    
+    <div class="divGeneral">
+        <h1 class="titulo">Examen M0615 - Solució</h1>
+        <h1 class="ejercicio">Exercici 1: Cards amb Transicions</h1>
+
+        <div class="exercicio1-flex">
+            <div class="divCard">
+                <div class="divColor1"></div>
+                <div class="textoCard">
+                    <h2>Card 1</h2>
+                    <p>Aquesta card té transicions de color, escala i obra al passar el ratolí. Observa com s'eleva
+                        visualment amb una transició suau.</p>
+
+                </div>
+            </div>
+            <div class="divCard">
+                <div class="divColor2"></div>
+                <div class="textoCard">
+                    <h2>Card 2</h2>
+                    <p>Les transformacions inclouen sacle(1.1) i traslateY(-10px) amb una durada de 400ms i easing
+                        ease-out</p>
+
+                </div>
+            </div>
+            <div class="divCard">
+                <div class="divColor3"></div>
+                <div class="textoCard">
+                    <h2>Card 3</h2>
+                    <p>L'ombra augmenta al hover per donar profunditat i sensació d'elevació.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <h1 class="ejercicio">Exercici 2: Botons amb Animacions</h1>
+        <div class="divBtn">
+            <button class="btnFons">TRANSICIÓ DE FONS</button>
+            <button class="btnRotate">ROTACIÓ AL CLIC</button>
+            <button class="btnScale">ESCALA</button>
+            <button class="btnComb">COMBINACIÓ</button>
+        </div>
+
+        <h1 class="ejercicio">Exercici 3: Animació amb @keyframes</h1>
+        <div class="ex3">
+            <div class="redonda"></div>
+        </div>
+        
+
+        <h1 class="ejercicio">Exercici 4: Menú amb Transicions</h1>
+        <div class="menu">
+            <div class="seccion">
+                <a href="#">Home</a>
+                <div class="barra"></div>
+            </div>
+            <div class="seccion">
+                <a href="#">Sobre</a>
+                <div class="barra"></div>
+            </div>
+            <div class="seccion">
+                <a href="#">Serveis</a>
+                <div class="barra"></div>
+            </div>
+            <div class="seccion">
+                <a href="#">Contacte</a>
+                <div class="barra"></div>
+            </div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
